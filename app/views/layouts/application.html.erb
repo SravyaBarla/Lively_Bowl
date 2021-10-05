@@ -378,6 +378,7 @@ Pick any one of our foods for example and you will find not just a  blend of uni
 <% end %>
 <p class="navbar-text float-right">
 <% if user_signed_in? %>
+  <% $text=current_user.email%>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
